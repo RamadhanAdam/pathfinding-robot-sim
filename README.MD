@@ -1,6 +1,4 @@
 # AI Vacuum Cleaner Simulation 
-![CI](https://github.com/RamadhanAdam/pathfinding-robot-sim/actions/workflows/ci.yml/badge.svg)
-
 An end-to-end autonomous vacuum simulation that benchmarks **path-finding intelligence** against **resource constraints** in a reproducible, publication-ready pipeline.
 
 ---
