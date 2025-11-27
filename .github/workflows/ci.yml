@@ -1,14 +1,23 @@
 name: CI
 on:
   push:
+    branches: [ "main" ]
   pull_request:
+    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
   test:
     runs-on: ubuntu-latest
+    # Granting permission to push changes back to the repo
+    permissions:
+      contents: write
+      
     steps:
       - uses: actions/checkout@v3
+        with:
+          # Checking out the actual branch name so we can push to it (crucial for PRs)
+          ref: ${{ github.head_ref }}
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -29,8 +38,26 @@ jobs:
       - name: Format code
         run: black .
 
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          # Only commit if there are changes
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "style: apply auto-formatting [skip ci]"
+            git push
+          fi
+
       - name: Run style check
-        run: python -m flake8 . --count --statistics || true
+        run: python -m flake8 . --count --statistics
 
       - name: Run tests
-        run: python -m pytest tests/ || true
+        run: |
+          if [ -d "tests" ]; then
+            python -m pytest tests/
+          else
+            echo "No tests folder found, skipping tests."
+          fi
