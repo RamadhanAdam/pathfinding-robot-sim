@@ -1,4 +1,6 @@
-# AI Vacuum Cleaner Simulation  
+# AI Vacuum Cleaner Simulation 
+[![PyPI version](https://badge.fury.io/py/pathfinding-robot-sim.svg)](https://badge.fury.io/py/pathfinding-robot-sim)
+ 
 **MSc Assignment / Professional Portfolio Version**
 
 An end-to-end autonomous vacuum simulation that benchmarks **path-finding intelligence** against **resource constraints** in a reproducible, publication-ready pipeline.
