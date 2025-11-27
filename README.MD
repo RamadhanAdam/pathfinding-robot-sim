@@ -46,7 +46,7 @@ vacuum-cleaner-ai/
 - **Mode selector**: Single run (manual restart) or Continuous loop (auto-restart)  
 - **Auto-export**: PNG charts + JSON raw data on every batch run
 
-![strategy_comparison](https://user-images.githubusercontent.com/yourname/strategy_comparison_20251127.png)
+![strategy_comparison](strategy_comparison_20251127_213234.png)
 
 ---
 
@@ -121,7 +121,7 @@ pip install -r requirements.txt
   author = {Zome, Ramadhan},
   title  = {AI Vacuum Cleaner Simulation: Path-Finding vs. Battery Constraints},
   year   = {2025},
-  url    = {https://github.com/yourusername/vacuum-cleaner-ai}
+  url    = {https://github.com/RamadhanAdam/pathfinding-robot-sim}
 }
 ```
 
