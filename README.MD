@@ -130,4 +130,4 @@ pip install -r requirements.txt
 ## 9. License & Contact
 
 **MIT License** – see LICENSE file.  
-Ramadhan Zome – [ramadhanzome@gmail.com](mailto:ramadhanzome@gmail.com) – [GitHub](https://github.com/RamadhanAdam)
+Ramadhan Zome – [ramadhanzome4@gmail.com](mailto:ramadhanzome4@gmail.com) – [GitHub](https://github.com/RamadhanAdam)
