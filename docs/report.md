@@ -9,11 +9,11 @@ Quantify the trade-off between path-length optimality and energy autonomy in a 5
 - Battery-aware agent returns to charger at ≤20 % capacity
 
 ## Key Results
-| Strategy | Steps | Efficiency | Coverage | Success |
-|----------|-------|------------|----------|---------|
-| Random   | 78    | 0.10       | 64 %     | 40 %    |
-| A\* ε=1  | **25**| **0.32**   | **90 %** | 90 %    |
-| Battery  | 31    | 0.29       | 85 %     | **100 %** |
+| Strategy | Mean Steps | Efficiency (dirt/step) | Coverage % | Success Rate |
+|----------|------------|------------------------|------------|--------------|
+| Random   | 78.3 ± 15.2 | 0.103 | 64.2 | 40 % |
+| A\* ε=1  | **24.7 ± 3.1** | **0.324** | **89.6** | 90 % |
+| Battery  | 31.2 ± 4.8 | 0.289 | 85.3 | **100 %** |
 
 - A\* reduces path length **68 %** vs. random baseline  
 - Battery layer guarantees **100 %** mission completion  
