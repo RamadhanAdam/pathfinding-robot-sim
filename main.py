@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 
 # --- Imports ---
 from environment.grid import Environment
-from agent.vaccum import VaccumCleaner
+from agent.vacuum import VaccumCleaner
 from utils.visualizations import VisualizationManager
 from utils.strategy_comparison import StrategyComparator
 # ---------------

@@ -7,7 +7,7 @@ Compare different cleaning strategies and analyze performance.
 import matplotlib.pyplot as plt
 import numpy as np
 from environment.grid import Environment
-from agent.vaccum import VaccumCleaner
+from agent.vacuum import VaccumCleaner
 import json
 
 class StrategyComparator:
@@ -32,9 +32,9 @@ class StrategyComparator:
                     env = Environment(self.grid_size, self.dirt_prob)
                     
                     if strategy == 'astar':
-                        vacuum = VaccumCleaner(env, strategy='astar', epsilon=eps)
+                        vacuum = vacuumCleaner(env, strategy='astar', epsilon=eps)
                     else:
-                        vacuum = VaccumCleaner(env, strategy)
+                        vacuum = vacuumCleaner(env, strategy)
 
                     # Run simulation
                     max_steps = 100
